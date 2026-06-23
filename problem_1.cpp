@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 
+// We compare every character from the end to begining taking all respect for edge cases 
 class find_suffix {
 public:
     string longestCommonSuffix(vector<string>& strs) {
@@ -29,7 +30,7 @@ public:
             suffix.push_back(c);
             i++;
         }
-
+// To reverse the suffix for example if the longest common suffix is {ing} without the reverse algorithm it will return {gni} 
         reverse(suffix.begin(), suffix.end());
         return suffix;
     }
